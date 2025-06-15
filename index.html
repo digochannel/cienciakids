@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ciência Kids</title>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #f0f9ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffeb3b;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2em;
+      color: #0072ff;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      background-color: #ff9800;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #f57c00;
+    }
+
+    footer {
+      background-color: #0072ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      main p {
+        font-size: 1em;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ciência Kids 🧪✨</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Experimentos</a>
+      <a href="#">Vídeos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bem-vindo ao Ciência Kids!</h2>
+    <p>Um universo de descobertas, experiências e diversão para pequenos cientistas curiosos! 🌈🔬</p>
+    <button class="btn" onclick="mostrarMensagem()">Clique para uma curiosidade!</button>
+    <p id="curiosidade" style="margin-top: 20px; font-weight: bold;"></p>
+  </main>
+
+  <footer>
+    © 2025 Ciência Kids • Desenvolvido com 💡 por Pequenos Gênios<br>
+    <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    function mostrarMensagem() {
+      const curiosidades = [
+        "O polvo tem três corações! 🐙",
+        "A água quente congela mais rápido que a fria. Que loucura, né? ❄️",
+        "O DNA humano é 60% igual ao da banana! 🍌",
+        "As abelhas podem reconhecer rostos humanos. 🐝",
+        "Seu estômago se renova a cada 3 dias. Eca ou incrível? 😅"
+      ];
+      const index = Math.floor(Math.random() * curiosidades.length);
+      document.getElementById("curiosidade").innerText = curiosidades[index];
+    }
+  </script>
+
+</body>
+</html>
